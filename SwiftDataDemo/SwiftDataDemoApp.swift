@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SwiftDataDemoApp: App {
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ViewDemo()
         }
+        .modelContainer(for: [TodoModel.self, Tag.self])
     }
 }
