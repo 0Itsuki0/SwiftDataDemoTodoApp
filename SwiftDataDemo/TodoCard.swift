@@ -65,9 +65,6 @@ struct TodoCard: View {
         .frame(maxWidth: .infinity)
         .frame(height: 150)
         .background(RoundedRectangle(cornerRadius: 16).fill(.gray.opacity(0.2)).stroke(.black, style: .init(lineWidth: 2.0)))
-        .onAppear {
-            print(todo.tags)
-        }
-       
+
     }
 }
