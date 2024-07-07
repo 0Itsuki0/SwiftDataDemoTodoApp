@@ -13,7 +13,7 @@ struct ContentView: View {
             NavigationLink {
                 ManagerDemo()
             } label: {
-                Text("SwiftData + \nSwiftUI View")
+                Text("SwiftData + \nManager Class")
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(maxWidth: .infinity)
@@ -25,7 +25,7 @@ struct ContentView: View {
                 ViewDemo()
                     .modelContainer(for: [TodoModel.self, Tag.self])
             } label: {
-                Text("SwiftData + \nManager Class")
+                Text("SwiftData + \nSwiftUI View")
                     .multilineTextAlignment(.center)
                     .padding()
                     .frame(maxWidth: .infinity)
