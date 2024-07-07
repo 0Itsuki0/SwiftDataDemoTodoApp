@@ -18,12 +18,6 @@ struct SwiftDataDemoApp: App {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .background(Color.gray.opacity(0.2))
-//            ManagerDemo()
-//                .onAppear {
-//                    print(URL.applicationSupportDirectory.path(percentEncoded: false))
-//                }
-
         }
-//        .modelContainer(for: [TodoModel.self, Tag.self])
     }
 }
