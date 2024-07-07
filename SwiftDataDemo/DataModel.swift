@@ -10,7 +10,8 @@ import SwiftData
 
 @Model
 class TodoModel {
-@Attribute(.unique) var id: UUID = UUID()
+    
+    @Attribute(.unique) var id: UUID = UUID()
     var title: String
     var content: String
     var iconData: Data
@@ -26,7 +27,7 @@ class TodoModel {
     var createDate: Date
     var isDone: Bool
     
-    @Relationship(deleteRule: .noAction) var tags: [Tag]
+    var tags: [Tag]
     
     init(title: String, content: String, icon: UIImage, createDate: Date, isDone: Bool, tags: [Tag]) {
         self.title = title
@@ -43,10 +44,13 @@ class TodoModel {
 class Tag {
     var name: String
     var color: TagColor
+    @Relationship(inverse: \TodoModel.tags) var todos: [TodoModel]
+
     
-    init(name: String, color: TagColor) {
+    init(name: String, color: TagColor, todos: [TodoModel]) {
         self.name = name
         self.color = color
+        self.todos = todos
     }
 }
 

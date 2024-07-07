@@ -12,8 +12,18 @@ struct SwiftDataDemoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ViewDemo()
+            NavigationStack {
+                ContentView()
+
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .background(Color.gray.opacity(0.2))
+//            ManagerDemo()
+//                .onAppear {
+//                    print(URL.applicationSupportDirectory.path(percentEncoded: false))
+//                }
+
         }
-        .modelContainer(for: [TodoModel.self, Tag.self])
+//        .modelContainer(for: [TodoModel.self, Tag.self])
     }
 }
